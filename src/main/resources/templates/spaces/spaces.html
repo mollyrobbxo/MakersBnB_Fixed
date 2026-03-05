@@ -3,20 +3,30 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>MakersBnB - Spaces</title>
+    <title>Available Spaces</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Available Spaces</h1>
-    </header>
-    <div th:each="space : ${spaces}">
-        <h2 th:text="${space.name}"></h2>
+
+<h1>Available Spaces</h1>
+
+<div class="spaces-grid">
+
+    <div class="space-card" th:each="space : ${spaces}">
+
+        <h3 th:text="${space.name}">Space name</h3>
+
+        <p th:text="'£' + ${space.price} + ' per night'"></p>
+
         <p th:text="${space.description}"></p>
-        <p th:text="'£' + ${#numbers.formatDecimal(space.price, 1, 2)} + ' per night'"></p>
+
     </div>
 
-    <a href="/">Go to homepage</a>
+</div>
+
+
+<a class="primary-btn" href="/">Go to homepage</a>
 
 </body>
 

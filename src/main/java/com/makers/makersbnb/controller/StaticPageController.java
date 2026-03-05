@@ -54,13 +54,17 @@ public class StaticPageController {
     }
 
     @PostMapping("/spaces")
-// Spring Boot uses the form data to create an instance of space
-// which is then passed in as an arg here
     public RedirectView create(Space space) {
         SpaceRepository.save(space);
         // assumes you already created a method to handle `GET "/spaces"`
         return new RedirectView("/spaces");
     }
+
+//    @PostMapping("/spaces/search")
+//    public RedirectView search(String search){
+//        SpaceRepository.findSpaceByName(search);
+//        return new RedirectView("/");
+//    }
 
 
 }
