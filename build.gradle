@@ -41,6 +41,17 @@ dependencies {
 	testCompileOnly("org.projectlombok:lombok:1.18.42")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
 
+	//Authentication
+	implementation 'com.okta.spring:okta-spring-boot-starter:3.1.0' // Use 3.1.0 instead of 3.0.5
+
+// Add these two — not in the journey instructions but required for Spring Boot 4.x
+	implementation 'org.springframework.boot:spring-boot-starter-security-oauth2-client'
+	implementation 'org.springframework.boot:spring-boot-starter-security-oauth2-resource-server'
+
+// These remain the same as the journey instructions
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
 
 }
 

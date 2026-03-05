@@ -1,0 +1,5 @@
+okta:
+  oauth2:
+    issuer: https://dev-hzxr2oto550xfkv8.us.auth0.com/
+    client-id: 0AczC60r4P3OqVrmjUhcu4886uFCy9Zg
+    client-secret: 27s79Jt0gvOB7mDF_tCTX5YNBHKpHTlj3k2vR2ad9JAJPBy5UU4l-3rH1w6410dR
